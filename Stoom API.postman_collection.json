@@ -1,0 +1,1718 @@
+{
+	"info": {
+		"_postman_id": "1b383702-08a0-44be-8ed2-e4bf2e6440a3",
+		"name": "Stoom API",
+		"description": "Stoom API teste implementation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1629354"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "brand",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/brand/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"brand",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/brand/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"brand",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"brandName\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/brand/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"brand",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/brand/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"brand",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"brandName\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/brand/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/brand/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"brand",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"brandName\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"brandName\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"brandName\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/brand/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"brandName\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/brand/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"brand",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"brandName\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "save",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"brandName\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/brand/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"brandName\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/brand/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"brand",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"brandName\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find Id 1",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/category/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/category/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"category",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"categoryName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 1",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/category/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/category/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"category",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"categoryName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find All 1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/category/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"category",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/category/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"categoryName\": \"<string>\",\n    \"description\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"categoryName\": \"<string>\",\n    \"description\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "update 1",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"categoryName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/category/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"category",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"categoryName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/category/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"categoryName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "save 1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"categoryName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/category/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"category",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"categoryName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/category/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"categoryName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "price",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find Id 2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/price/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"price",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/price/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"price",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"priceValue\": \"<double>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 2",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/price/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"price",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/price/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"price",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"priceValue\": \"<double>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find All 2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/price/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"price",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/price/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"price",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"priceValue\": \"<double>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"priceValue\": \"<double>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "update 2",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"priceValue\": \"<double>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/price/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"price",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"priceValue\": \"<double>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/price/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"price",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"priceValue\": \"<double>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "save 2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"priceValue\": \"<double>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/price/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"price",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"priceValue\": \"<double>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/price/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"price",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"priceValue\": \"<double>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "brand",
+							"item": [
+								{
+									"name": "find All By Brand Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/brand?brandId=<long>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"brand"
+											],
+											"query": [
+												{
+													"key": "brandId",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/brand?brandId=<long>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"brand"
+													],
+													"query": [
+														{
+															"key": "brandId",
+															"value": "<long>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": \"<long>\",\n    \"sku\": \"<string>\",\n    \"productName\": \"<string>\",\n    \"brandId\": {\n      \"id\": \"<long>\",\n      \"brandName\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"priceId\": {\n      \"id\": \"<long>\",\n      \"priceValue\": \"<double>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"categoryId\": {\n      \"id\": \"<long>\",\n      \"categoryName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"stock\": \"<long>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"sku\": \"<string>\",\n    \"productName\": \"<string>\",\n    \"brandId\": {\n      \"id\": \"<long>\",\n      \"brandName\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"priceId\": {\n      \"id\": \"<long>\",\n      \"priceValue\": \"<double>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"categoryId\": {\n      \"id\": \"<long>\",\n      \"categoryName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"stock\": \"<long>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "category",
+							"item": [
+								{
+									"name": "find All By Category Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/category?categoryId=<long>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"category"
+											],
+											"query": [
+												{
+													"key": "categoryId",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/category?categoryId=<long>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														"category"
+													],
+													"query": [
+														{
+															"key": "categoryId",
+															"value": "<long>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": \"<long>\",\n    \"sku\": \"<string>\",\n    \"productName\": \"<string>\",\n    \"brandId\": {\n      \"id\": \"<long>\",\n      \"brandName\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"priceId\": {\n      \"id\": \"<long>\",\n      \"priceValue\": \"<double>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"categoryId\": {\n      \"id\": \"<long>\",\n      \"categoryName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"stock\": \"<long>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"sku\": \"<string>\",\n    \"productName\": \"<string>\",\n    \"brandId\": {\n      \"id\": \"<long>\",\n      \"brandName\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"priceId\": {\n      \"id\": \"<long>\",\n      \"priceValue\": \"<double>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"categoryId\": {\n      \"id\": \"<long>\",\n      \"categoryName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"stock\": \"<long>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find Id 3",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"sku\": \"<string>\",\n  \"productName\": \"<string>\",\n  \"brandId\": {\n    \"id\": \"<long>\",\n    \"brandName\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"priceId\": {\n    \"id\": \"<long>\",\n    \"priceValue\": \"<double>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"categoryId\": {\n    \"id\": \"<long>\",\n    \"categoryName\": \"<string>\",\n    \"description\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"stock\": \"<long>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 3",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "default response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/product/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"sku\": \"<string>\",\n  \"productName\": \"<string>\",\n  \"brandId\": {\n    \"id\": \"<long>\",\n    \"brandName\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"priceId\": {\n    \"id\": \"<long>\",\n    \"priceValue\": \"<double>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"categoryId\": {\n    \"id\": \"<long>\",\n    \"categoryName\": \"<string>\",\n    \"description\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"stock\": \"<long>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find All 3",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/product/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/product/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"sku\": \"<string>\",\n    \"productName\": \"<string>\",\n    \"brandId\": {\n      \"id\": \"<long>\",\n      \"brandName\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"priceId\": {\n      \"id\": \"<long>\",\n      \"priceValue\": \"<double>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"categoryId\": {\n      \"id\": \"<long>\",\n      \"categoryName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"stock\": \"<long>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"sku\": \"<string>\",\n    \"productName\": \"<string>\",\n    \"brandId\": {\n      \"id\": \"<long>\",\n      \"brandName\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"priceId\": {\n      \"id\": \"<long>\",\n      \"priceValue\": \"<double>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"categoryId\": {\n      \"id\": \"<long>\",\n      \"categoryName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"dtCreate\": \"<dateTime>\",\n      \"dtUpdate\": \"<dateTime>\",\n      \"active\": \"<boolean>\"\n    },\n    \"stock\": \"<long>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "update 3",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"sku\": \"<string>\",\n  \"productName\": \"<string>\",\n  \"brandId\": \"<long>\",\n  \"priceId\": \"<long>\",\n  \"categoryId\": \"<long>\",\n  \"stock\": \"<long>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/product/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"sku\": \"<string>\",\n  \"productName\": \"<string>\",\n  \"brandId\": \"<long>\",\n  \"priceId\": \"<long>\",\n  \"categoryId\": \"<long>\",\n  \"stock\": \"<long>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"sku\": \"<string>\",\n  \"productName\": \"<string>\",\n  \"brandId\": {\n    \"id\": \"<long>\",\n    \"brandName\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"priceId\": {\n    \"id\": \"<long>\",\n    \"priceValue\": \"<double>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"categoryId\": {\n    \"id\": \"<long>\",\n    \"categoryName\": \"<string>\",\n    \"description\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"stock\": \"<long>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "save 3",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"sku\": \"<string>\",\n  \"productName\": \"<string>\",\n  \"brandId\": \"<long>\",\n  \"priceId\": \"<long>\",\n  \"categoryId\": \"<long>\",\n  \"stock\": \"<long>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/product/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "default response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"sku\": \"<string>\",\n  \"productName\": \"<string>\",\n  \"brandId\": \"<long>\",\n  \"priceId\": \"<long>\",\n  \"categoryId\": \"<long>\",\n  \"stock\": \"<long>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"sku\": \"<string>\",\n  \"productName\": \"<string>\",\n  \"brandId\": {\n    \"id\": \"<long>\",\n    \"brandName\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"priceId\": {\n    \"id\": \"<long>\",\n    \"priceValue\": \"<double>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"categoryId\": {\n    \"id\": \"<long>\",\n    \"categoryName\": \"<string>\",\n    \"description\": \"<string>\",\n    \"dtCreate\": \"<dateTime>\",\n    \"dtUpdate\": \"<dateTime>\",\n    \"active\": \"<boolean>\"\n  },\n  \"stock\": \"<long>\",\n  \"dtCreate\": \"<dateTime>\",\n  \"dtUpdate\": \"<dateTime>\",\n  \"active\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
